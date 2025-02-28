@@ -1,12 +1,1 @@
-name: Sleep on Push or PR
-
-on:
-  push:
-  pull_request:
-
-jobs:
-  sleep-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Sleep for 60 seconds
-        run: sleep 3
+heheheheh
