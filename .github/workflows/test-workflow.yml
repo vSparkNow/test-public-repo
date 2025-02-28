@@ -1,12 +1,20 @@
-TEST1
+name: Fail After Sleep
 
-TEST2
+on:
+  push:
+    branches:
+      - main  # Change this if needed
 
+jobs:
+  sleep-and-fail:
+    runs-on: ubuntu-latest
 
-TEST3
+    steps:
+      - name: Start Workflow
+        run: echo "Starting workflow..."
 
-TEST4
+      - name: Sleep for 30 seconds
+        run: sleep 30
 
-  TEST
-
-  322
+      - name: Fail intentionally
+        run: exit 1
